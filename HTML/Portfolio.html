@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>María Sol López - Backend Developer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#57b5e7',
+secondary: '#8dd3c7'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.skill-bar { transition: width 0.5s ease-in-out; }
+</style>
+</head>
+<body class="bg-white min-h-screen font-['Inter']">
+<nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#home" class="text-gray-700 hover:text-primary transition-colors cursor-pointer" data-translate="home">Home</a>
+<a href="#projects" class="text-gray-700 hover:text-primary transition-colors cursor-pointer">Projects</a>
+<a href="#skills" class="text-gray-700 hover:text-primary transition-colors cursor-pointer">Skills</a>
+<a href="#about" class="text-gray-700 hover:text-primary transition-colors cursor-pointer">About</a>
+<a href="#contact" class="text-gray-700 hover:text-primary transition-colors cursor-pointer">Contact</a>
+<button id="language-switch" class="flex items-center space-x-1 text-gray-700 hover:text-primary transition-colors cursor-pointer">
+<i class="ri-translate-2-line"></i>
+<span class="language-text">ES</span>
+</button>
+</div>
+<div class="md:hidden flex items-center">
+<button id="mobile-menu-button" class="text-gray-700 hover:text-primary cursor-pointer">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden">
+<div class="px-2 pt-2 pb-3 space-y-1 bg-white border-b border-gray-100">
+<a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer" data-translate="home">Home</a>
+<a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer" data-translate="projects">Projects</a>
+<a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer" data-translate="skills">Skills</a>
+<a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer" data-translate="about">About</a>
+<a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary cursor-pointer" data-translate="contact">Contact</a>
+<button id="mobile-language-switch" class="flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-primary cursor-pointer">
+<i class="ri-translate-2-line"></i>
+<span class="language-text">ES</span>
+</button>
+</div>
+</div>
+</nav>
+<section id="home" class="pt-16 min-h-screen relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://public.readdy.ai/ai/img_res/7b6b09d0a46c38225197ebd727058ffb.jpg')] bg-cover bg-center opacity-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 relative">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="text-5xl font-bold text-gray-900 mb-6">María Sol López</h1>
+<h2 class="text-3xl font-bold text-gray-700 mb-6">Backend Developer</h2>
+<p class="text-xl text-gray-600 mb-8">I'm a Software Development student devolping personal projects in CSharp and PHP, focused on creating Back-End solutions in web applications and desktop applications connected to relational databases.</p>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors cursor-pointer whitespace-nowrap" data-translate="viewProjects">View Projects</button>
+<button class="border border-primary text-primary px-6 py-3 !rounded-button hover:bg-primary/10 transition-colors cursor-pointer whitespace-nowrap" data-translate="contactMe">Contact Me</button>
+</div>
+</div>
+<div class="relative">
+<img src="/Imagenes/SolAnimated.jpg" alt="María Sol López" class="rounded-2xl shadow-2xl w-full object-cover">
+</div>
+</div>
+</div>
+</section>
+<section id="skills" class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Technical Expertise</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-white p-8 rounded-xl shadow-lg">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-computer-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold">Desktop Development</h3>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">C# .NET</span>
+<span class="text-gray-600">95%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-primary rounded-full skill-bar" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">WPF</span>
+<span class="text-gray-600">90%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-primary rounded-full skill-bar" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">Windows Forms</span>
+<span class="text-gray-600">85%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-primary rounded-full skill-bar" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-full mr-4">
+<i class="ri-code-line text-secondary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold">Web Development</h3>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">PHP</span>
+<span class="text-gray-600">92%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-secondary rounded-full skill-bar" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">Laravel</span>
+<span class="text-gray-600">88%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-secondary rounded-full skill-bar" style="width: 88%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700">MySQL</span>
+<span class="text-gray-600">90%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-secondary rounded-full skill-bar" style="width: 90%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="projects" class="py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Featured Projects</h2>
+<div class="flex justify-center mb-8 space-x-4">
+<button class="px-6 py-2 !rounded-button bg-primary text-white hover:bg-primary/90 transition-colors cursor-pointer whitespace-nowrap filter-btn active" data-filter="all">All Projects</button>
+<button class="px-6 py-2 !rounded-button border border-gray-300 hover:border-primary hover:text-primary transition-colors cursor-pointer whitespace-nowrap filter-btn" data-filter="csharp">C# Projects</button>
+<button class="px-6 py-2 !rounded-button border border-gray-300 hover:border-primary hover:text-primary transition-colors cursor-pointer whitespace-nowrap filter-btn" data-filter="php">PHP Projects</button>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="project-card" data-category="csharp">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/738d28e50b9431b5e1a4dad5098c5c24.jpg" alt="Project 1" class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Hotel Management System</h3>
+<p class="text-gray-600 mb-4">A comprehensive desktop application for managing hotel resources and customers data.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">C#</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">WPF</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">SQLite</span>
+</div>
+<button class="text-primary hover:text-primary/80 font-medium cursor-pointer">View Details →</button>
+</div>
+</div>
+</div>
+<div class="project-card" data-category="php">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/51c13722fe9513e800a9740ad66e9edf.jpg" alt="Project 2" class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+<p class="text-gray-600 mb-4">A scalable e-commerce solution with advanced inventory management.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">PHP</span>
+<span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">Laravel</span>
+<span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">MySQL</span>
+</div>
+<button class="text-primary hover:text-primary/80 font-medium cursor-pointer">View Details →</button>
+</div>
+</div>
+</div>
+<div class="project-card" data-category="csharp">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/82ca223c5875b40fb82d44d748c29472.jpg" alt="Project 3" class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Financial Analytics Suite</h3>
+<p class="text-gray-600 mb-4">Real-time financial data analysis and reporting desktop application.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">C#</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">.NET Core</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">MongoDB</span>
+</div>
+<button class="text-primary hover:text-primary/80 font-medium cursor-pointer">View Details →</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="experience" class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Professional Experience</h2>
+<div class="space-y-12">
+<div class="relative pl-8 pb-12 border-l-2 border-primary/20">
+<div class="absolute -left-2 top-0 w-5 h-5 bg-primary rounded-full"></div>
+<div class="bg-white p-6 rounded-xl shadow-lg ml-6">
+<h3 class="text-xl font-semibold mb-2">Senior Backend Developer</h3>
+<p class="text-gray-600 mb-2">TechCorp Solutions • 2023 - Present</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2">
+<li>Led the development of enterprise-level C# applications</li>
+<li>Implemented microservices architecture using .NET Core</li>
+<li>Optimized database performance resulting in 40% faster queries</li>
+</ul>
+</div>
+</div>
+<div class="relative pl-8 pb-12 border-l-2 border-primary/20">
+<div class="absolute -left-2 top-0 w-5 h-5 bg-primary rounded-full"></div>
+<div class="bg-white p-6 rounded-xl shadow-lg ml-6">
+<h3 class="text-xl font-semibold mb-2">Backend Developer</h3>
+<p class="text-gray-600 mb-2">WebSolutions Inc • 2020 - 2023</p>
+<ul class="list-disc list-inside text-gray-600 space-y-2">
+<li>Developed and maintained PHP/Laravel applications</li>
+<li>Created RESTful APIs for mobile applications</li>
+<li>Implemented automated testing reducing bugs by 60%</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Get in Touch</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<form id="contact-form" class="space-y-6">
+<div>
+<label class="block text-gray-700 mb-2" for="name">Name</label>
+<input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary" required>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="email">Email</label>
+<input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary" required>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="message">Message</label>
+<textarea id="message" rows="6" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary" required></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 transition-colors cursor-pointer whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<div class="space-y-8">
+<div class="bg-white p-8 rounded-xl shadow-lg">
+<h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<a href="mailto:maria.sol.lopez@example.com" class="text-gray-600 hover:text-primary">lopezsol2605@gmail.com</a>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-linkedin-line text-primary"></i>
+</div>
+<a href="#" class="text-gray-600 hover:text-primary">LinkedIn Profile</a>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-github-line text-primary"></i>
+</div>
+<a href="https://github.com/lopezsolcode" class="text-gray-600 hover:text-primary">GitHub Profile</a>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg">
+<h3 class="text-xl font-semibold mb-4">Current Availability</h3>
+<p class="text-gray-600">Available for freelance projects and full-time opportunities</p>
+<button class="mt-6 w-full border border-primary text-primary px-6 py-3 !rounded-button hover:bg-primary/10 transition-colors cursor-pointer whitespace-nowrap">Download CV</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-3 gap-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-primary mb-4 block">logo</a>
+<p class="text-gray-400">Crafting robust backend solutions with passion and precision.</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#home" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+<li><a href="#projects" class="text-gray-400 hover:text-primary transition-colors">Projects</a></li>
+<li><a href="#skills" class="text-gray-400 hover:text-primary transition-colors">Skills</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Connect</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-github-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-linkedin-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-stack-overflow-line"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+<p>© 2025 María Sol López. Built with Modern Web Technologies.</p>
+</div>
+</div>
+</footer>
+<div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+<div class="bg-white rounded-xl p-8 max-w-md mx-4">
+<div class="text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-check-line text-primary text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">Message Sent Successfully!</h3>
+<p class="text-gray-600 mb-6">Thank you for reaching out. I'll get back to you soon.</p>
+<button onclick="closeModal()" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors cursor-pointer whitespace-nowrap">Close</button>
+</div>
+</div>
+</div>
+<script>
+const translations = {
+  en: {
+    home: 'Home',
+    projects: 'Projects',
+    skills: 'Skills',
+    about: 'About',
+    contact: 'Contact',
+    viewProjects: 'View Projects',
+    contactMe: 'Contact Me',
+    sendMessage: 'Send Message',
+    name: 'Name',
+    email: 'Email',
+    message: 'Message',
+    downloadCV: 'Download CV',
+    quickLinks: 'Quick Links',
+    connect: 'Connect',
+    currentAvailability: 'Current Availability',
+    availableFor: 'Available for freelance projects and full-time opportunities'
+  },
+  es: {
+    home: 'Inicio',
+    projects: 'Proyectos',
+    skills: 'Habilidades',
+    about: 'Sobre mí',
+    contact: 'Contacto',
+    viewProjects: 'Ver Proyectos',
+    contactMe: 'Contáctame',
+    sendMessage: 'Enviar Mensaje',
+    name: 'Nombre',
+    email: 'Correo',
+    message: 'Mensaje',
+    downloadCV: 'Descargar CV',
+    quickLinks: 'Enlaces Rápidos',
+    connect: 'Conectar',
+    currentAvailability: 'Disponibilidad Actual',
+    availableFor: 'Disponible para proyectos freelance y oportunidades de tiempo completo'
+  }
+};
+let currentLang = 'en';
+function switchLanguage() {
+  currentLang = currentLang === 'en' ? 'es' : 'en';
+  document.querySelector('.language-text').textContent = currentLang === 'en' ? 'ES' : 'EN';
+  
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const key = element.dataset.translate;
+    if (translations[currentLang][key]) {
+      element.textContent = translations[currentLang][key];
+    }
+  });
+}
+document.getElementById('language-switch').addEventListener('click', switchLanguage);
+document.getElementById('mobile-menu-button').addEventListener('click', function() {
+document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+filterButtons.forEach(button => {
+button.addEventListener('click', () => {
+const filter = button.dataset.filter;
+filterButtons.forEach(btn => btn.classList.remove('bg-primary', 'text-white'));
+button.classList.add('bg-primary', 'text-white');
+projectCards.forEach(card => {
+if (filter === 'all' || card.dataset.category === filter) {
+card.style.display = 'block';
+} else {
+card.style.display = 'none';
+}
+});
+});
+});
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+e.preventDefault();
+document.getElementById('success-modal').style.display = 'flex';
+});
+function closeModal() {
+document.getElementById('success-modal').style.display = 'none';
+document.getElementById('contact-form').reset();
+}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior: 'smooth'
+});
+});
+});
+</script>
+</body>
+</html>
