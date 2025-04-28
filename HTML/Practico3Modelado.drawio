@@ -212,7 +212,7 @@
           <mxGeometry x="930" y="-880" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="3wIR6ko056dWElmyYk91-74" value="Paciente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="1211" y="-1131.8" width="30" height="60" as="geometry" />
+          <mxGeometry x="1195" y="-1131.8" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="3wIR6ko056dWElmyYk91-75" value="Iniciar sesión" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1105" y="-875" width="120" height="80" as="geometry" />
@@ -244,7 +244,7 @@
         <mxCell id="3wIR6ko056dWElmyYk91-84" value="Enviar confirmación de turno solicitado por email" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1422.8" y="-631.8" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="3wIR6ko056dWElmyYk91-85" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" vertex="1" parent="1">
+        <mxCell id="3wIR6ko056dWElmyYk91-85" value="Sistema" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" vertex="1" parent="1">
           <mxGeometry x="1372.2" y="-369.99999999999994" width="45.6" height="61.800000000000004" as="geometry" />
         </mxCell>
         <mxCell id="3wIR6ko056dWElmyYk91-87" value="Enviar recordatorio por email de turno próximo" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -304,10 +304,10 @@
             <mxPoint x="1230" y="-730" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="3wIR6ko056dWElmyYk91-101" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="3wIR6ko056dWElmyYk91-91" target="3wIR6ko056dWElmyYk91-74">
+        <mxCell id="3wIR6ko056dWElmyYk91-101" value="" style="endArrow=none;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="3wIR6ko056dWElmyYk91-91">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1370" y="-1020" as="sourcePoint" />
-            <mxPoint x="1470" y="-1080" as="targetPoint" />
+            <mxPoint x="1210" y="-1102" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="3wIR6ko056dWElmyYk91-102" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3wIR6ko056dWElmyYk91-77" target="3wIR6ko056dWElmyYk91-75">
