@@ -155,7 +155,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Vk50C9h4Wjug9lOvj_sG-7" value="N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="-185" width="150" height="30" as="geometry" />
+          <mxGeometry x="770" y="-180" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Vk50C9h4Wjug9lOvj_sG-8" value="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="920" y="-250" width="60" height="30" as="geometry" />
